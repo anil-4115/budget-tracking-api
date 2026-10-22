@@ -21,8 +21,12 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+
+const API_URL = (
+  import.meta.env.VITE_API_URL ||
+  "https://budget-tracking-api-voai.onrender.com/api"
+).replace(/\/+$/, "");
+
 
 const EMPTY_FORM = {
   title: "",
